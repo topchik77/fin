@@ -1,0 +1,56 @@
+.nav-link {
+    position: relative;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #c75f04;
+}
+
+.nav-link.active {
+    background: #c75f04;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link.active:hover {
+    background: #703706;
+}
+
+
+
+
+
+.banner {
+    position: relative;
+    background-image: url('./images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner > * {
+    position: relative;
+    z-index: 2;
+}
